@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Mines Game Main</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="all-money">
+        3000
+    </div>
+    <div class="mines-and-next">
+        <div class="mines">
+            Mines
+            <input oninput="getMinesValue()" id="mines-value" type="number" min="1" max="20" value="3">
+        </div>
+        <div class="next">
+            Next:<p class="next-money"></p>
+        </div>
+    </div>
+    <div id="container" class="container">
+    </div>
+    <div class="down-div">
+        <div class="betUSD">
+            Bet,USD
+            <input oninput= "getBetValue()" class="beted-money" type="number" min="1" max="100" value="1">
+        </div>
+        <div class="BET">
+            <button id="on-button" onclick="cashIn()" class="cash-in">
+                BET
+            </button>
+            <button id="off-button" onclick="cashOut()" class="cash-out">
+                Cash Out: <p class="cash-out-money">1</p>
+            </button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

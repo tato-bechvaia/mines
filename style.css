@@ -1,0 +1,205 @@
+body {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main 25 elements */
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+    border: 3px solid black;
+    border-radius: 10px ;
+    margin-top: 30px;
+}
+
+.container.disabled {
+    opacity: 0.9;
+}
+
+.theCardContainer {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 15px;
+    /* background: green; */
+    cursor: pointer;
+}
+
+.theCard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* margin: 10px; */
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    background: yellow;
+    cursor: pointer;
+}
+
+/* Inside Of Front Card */
+.theFront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: blue;
+    cursor: pointer;
+}
+
+.theFront.disabled {
+    opacity: 0.9;
+}
+
+.square {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 3px;
+    background: purple;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 7px;
+    border-radius: 50%;
+    background: blue;
+}
+
+/* Inside Of Back Card */
+.theBack {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: blue;
+    color: black;
+    transform: rotateY(180deg);
+    text-align: center;
+    justify-content: center;
+}
+
+.theBack.disabled {
+    opacity: 0.9;
+}
+/* ------------------------------------ */
+.all-money {
+    width: 95%;
+    height: 30px;
+    background-color: blueviolet;
+    border-radius: 10px ;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: end;
+    padding: 0 10px;
+}
+
+.mines-and-next {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 30px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.down-div {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 80px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+.betUSD {
+    width: 240px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-top: 15px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.betUSD input[type=number] {
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 100px;
+}
+
+.mines-and-next .mines input[type=number] {
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 50px;
+}
+
+.BET {
+    width: 240px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.BET button {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    color: aliceblue;
+    display: none;
+}
+
+.BET.game-on .cash-out {
+    display: block;
+    cursor: pointer;
+}
+
+.BET.game-off .cash-in {
+    display: block;
+    cursor: pointer;
+}
+
+.next {
+    width: 150px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: yellow;
+    color: black;
+    text-align: center;
+}
+
+.mines {
+    margin-left: 10px;
+}
+
+.BET button:disabled {
+    opacity: 0.7;
+}
+
+.cash-in {
+    background-color: seagreen;
+}
+
+.cash-out {
+    background-color: red;
+}
